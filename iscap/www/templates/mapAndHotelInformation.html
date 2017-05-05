@@ -1,0 +1,42 @@
+<ion-view title="Map and Hotel Information" id="page15">
+  <ion-content padding="false" class="has-header">
+    <creator-map-component options="{}" marker="false" location="500 N Interstate 35 Frontage Road Austin, Texas 78701" zoom="18" style="display:block;position:relative;width:100%;height:300px;">
+      <ui-gmap-google-map ng-if="map.center" center="map.center" zoom="map.zoom" options="map.options">
+        <ui-gmap-marker coords="map.marker.coords" idkey="map.marker.id" options="map.marker.options"></ui-gmap-marker>
+      </ui-gmap-google-map>
+    </creator-map-component>
+    <h3 id="mapAndHotelInformation-heading4" style="color:#000000;font-weight:300;text-align:center;">Hilton Garden Inn Austin Downtown/Convention Center</h3>
+    <div id="mapAndHotelInformation-markdown10" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        <strong>ADDRESS:</strong>
+        500 N Interstate 35 Austin, Texas 78701
+        <strong>PHONE:</strong> 512-480-8181</p>
+    </div>
+    <div id="mapAndHotelInformation-markdown9" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">We have reserved a block of rooms at a special rate of $159 per night available November 4 - 9. You must book by October 5 to get the special rate. Call 1-877-782-9444 and use the code ISCAP or click the link to book online.</p>
+    </div>
+    <button id="mapAndHotelInformation-button9" ng-click="bookOnline()" class="button button-balanced  button-block">Book Online</button>
+    <h1 id="mapAndHotelInformation-heading5" style="color:#000000;">View Floor Plans</h1>
+    <div id="mapAndHotelInformation-markdown11" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">Pick a Level to view:</p>
+    </div>
+    <div id="mapAndHotelInformation-button-bar1" class="button-bar">
+      <button id="mapAndHotelInformation-button13" ng-class="{'active': activeSection==1}" ng-click="changeSection(1)" class="button button-positive  button-block">100</button>
+      <button id="mapAndHotelInformation-button14" ng-class="{'active': activeSection==2}" ng-click="changeSection(2)" class="button button-positive  button-block">200</button>
+      <button id="mapAndHotelInformation-button15" ng-class="{'active': activeSection==3}" ng-click="changeSection(3)" class="button button-positive  button-block">300</button>
+      <button id="mapAndHotelInformation-button16" ng-class="{'active': activeSection==4}" ng-click="changeSection(4)" class="button button-positive  button-block">400</button>
+    </div>
+    <div>
+      <img src="img/8ZeYWdOYQ1Ga3rjLMLrO_level100.PNG" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" ng-show="activeSection==1">
+    </div>
+    <div>
+      <img src="img/M5aIe3CTUaAWUKryCsBf_level200.PNG" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" ng-show="activeSection==2">
+    </div>
+    <div>
+      <img src="img/DH3388srRkiBtXobevLS_level300.PNG" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" ng-show="activeSection==3">
+    </div>
+    <div>
+      <img src="img/wWrhuD6QI6zQBwP3Clbx_level400.PNG" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;" ng-show="activeSection==4">
+    </div>
+  </ion-content>
+</ion-view>

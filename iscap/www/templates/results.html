@@ -1,0 +1,24 @@
+<ion-view title="Results" id="page9">
+  <ion-content padding="true" class="has-header">
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="loadData()"></ion-refresher>
+    <div class="item item-body" id="results-list-item-container4" ng-repeat="survey in surveys">
+      <div id="results-markdown15" style="text-align:center;" class="show-list-numbers-and-dots">
+        <p style="margin-top:0px;color:#000000;">
+          <strong>{{ survey.name }}</strong>
+        </p>
+      </div>
+      <div id="results-markdown16" class="show-list-numbers-and-dots">
+        <p style="margin-top:0px;color:#000000;">Favorites:
+          <br>Presenter: {{ survey.favoritepresenter }}
+          <br>Event: {{ survey.favoriteevent }}</p>
+      </div>
+      <div id="results-markdown18" class="show-list-numbers-and-dots">
+        <p style="margin-top:0px;color:#000000;">Ratings:
+          <br>Hotel: {{ survey.hotelrating }}
+          <br>Meeting Rooms: {{ survey.meetingroomsrating }}
+          <br>Meals: {{ survey.mealsrating }}
+          <br>Conference Overall: {{ survey.conferenceoverallrating }}</p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

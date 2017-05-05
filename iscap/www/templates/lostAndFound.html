@@ -1,0 +1,29 @@
+<ion-view title="Lost and Found" id="page12">
+  <ion-content padding="false" scroll="false" class="has-header">
+    <ion-scroll id="lostAndFound-container4" scroll-glue="" class="top-container-lost">
+      <div class="item item-body" id="lostAndFound-list-item-container6" ng-repeat="message in messages">
+        <ion-list id="lostAndFound-list11">
+          <ion-item class="item-avatar" id="lostAndFound-list-item13" gravatar-src="message.email">
+            <h2>{{ message.name }}</h2>
+          </ion-item>
+        </ion-list>
+        <div id="lostAndFound-markdown23" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Title:
+            <strong>{{ message.title }}</strong>
+            <br>Item lost: {{ message.description }} </p>
+        </div>
+      </div>
+    </ion-scroll>
+    <form id="lostAndFound-form7" class="list bottom-form" ng-submit="addMessage()">
+      <label class="item item-input" id="lostAndFound-input11">
+        <span class="input-label">Title</span>
+        <input type="text" placeholder="" ng-model="data.title">
+      </label>
+      <label class="item item-input" id="lostAndFound-input14">
+        <span class="input-label">Describe lost item</span>
+        <input type="text" placeholder="" ng-model="data.description">
+      </label>
+      <button id="lostAndFound-button11" class="button button-positive  button-block">Submit</button>
+    </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,32 @@
+<ion-view title="Messages" id="page7">
+  <ion-content padding="false" scroll="false" class="has-header">
+    <ion-scroll id="messages-container1" scroll-glue="" class="top-container">
+      <div class="item item-body" id="messages-list-item-container3" ng-repeat="message in messages">
+        <ion-list id="messages-list4" class="manual-list-fullwidth">
+          <ion-item class="item-avatar" id="messages-list-item14" gravatar-src="message.email">
+            <h2>{{ message.name }}</h2>
+          </ion-item>
+        </ion-list>
+        <div id="messages-markdown6" style="text-align:center;" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Title:
+            <strong>{{ message.title }}</strong>
+            <br>Text: {{ message.messageText }}
+            <br>URL: {{ message.link }}</p>
+        </div>
+      </div>
+    </ion-scroll>
+    <form id="messages-form3" class="list bottom-form" ng-submit="addMessage()">
+      <label class="item item-input" id="messages-input7">
+        <span class="input-label">Title</span>
+        <input type="text" placeholder="" ng-model="data.title">
+      </label>
+      <label class="item item-input" id="messages-textarea1">
+        <span class="input-label">Text</span><textarea placeholder="" ng-model="data.text"></textarea></label>
+      <label class="item item-input" id="messages-input9">
+        <span class="input-label">Link</span>
+        <input type="text" placeholder="" ng-model="data.url">
+      </label>
+      <button id="messages-button6" class="button button-positive  button-full">Submit</button>
+    </form>
+  </ion-content>
+</ion-view>

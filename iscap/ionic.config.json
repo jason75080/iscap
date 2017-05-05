@@ -1,4 +1,5 @@
 {
   "name": "iscap",
-  "app_id": ""
+  "app_id": "f80b1542",
+  "gulpStartupTasks": ["sass", "watch"]
 }

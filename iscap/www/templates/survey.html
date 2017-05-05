@@ -1,0 +1,111 @@
+<ion-view title="Survey" id="page8">
+  <ion-content padding="true" class="has-header">
+    <div id="survey-markdown12" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">Fill out this form, and we'll record your results:</p>
+    </div>
+    <div id="survey-markdown13" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        <strong>Results are public</strong>
+      </p>
+    </div>
+    <form id="survey-form5" class="list">
+      <label class="item item-input" id="survey-input12">
+        <span class="input-label">Name</span>
+        <input type="text" placeholder="" ng-model="data.name">
+      </label>
+      <ion-item class="item-divider" id="survey-list-item-divider4"> Please select your favorite:</ion-item>
+      <label class="item item-select" id="survey-select1">
+        <span class="input-label">Presenter</span>
+        <select ng-model="data.favoritepresenter">
+          <option>None</option>
+          <option>Dr. Jeremy Bellah</option>
+          <option>Kareem Dana</option>
+          <option>Dr. Liang Chen</option>
+          <option>Dr. Sean Humpherys</option>
+          <option>Dr. Gary Kelly</option>
+          <option>James Webb</option>
+          <option>Nesrin Bakir</option>
+          <option>Dr. Amjad Abdullat</option>
+          <option>Dr. Denise Philpot</option>
+          <option>Dr. Jeffry Babb</option>
+          <option>Dr. Chris Zimmer</option>
+        </select>
+      </label>
+      <label class="item item-select" id="survey-select2">
+        <span class="input-label">Event</span>
+        <select ng-model="data.favoriteevent">
+          <option>None</option>
+          <option>Does slow internet build character???</option>
+          <option>Computers: A passing fad???</option>
+          <option>Self-Organization: Are there any benefits???</option>
+          <option>HTML 6: What is changing???</option>
+          <option>Scrum: Does anyone like it???</option>
+          <option>Why are McDonald's french fries the best???</option>
+          <option>Do hats make you smarter???</option>
+        </select>
+      </label>
+      <ion-item class="item-divider" id="survey-list-item-divider3"> Please rate: (1 = worst, 10 = best)</ion-item>
+      <label class="item item-select" id="survey-select3">
+        <span class="input-label">Hotel</span>
+        <select ng-model="data.hotelrating">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+        </select>
+      </label>
+      <label class="item item-select" id="survey-select4">
+        <span class="input-label">Meeting Rooms</span>
+        <select ng-model="data.meetingroomsrating">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+        </select>
+      </label>
+      <label class="item item-select" id="survey-select5">
+        <span class="input-label">Meals</span>
+        <select ng-model="data.mealsrating">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+        </select>
+      </label>
+      <label class="item item-select" id="survey-select6">
+        <span class="input-label">Conference Overall</span>
+        <select ng-model="data.conferenceoverallrating">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+        </select>
+      </label>
+    </form>
+    <button id="survey-button7" ng-click="submit()" ng-disable="submitting" class="button button-balanced  button-block">Submit</button>
+  </ion-content>
+</ion-view>

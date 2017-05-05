@@ -1,0 +1,42 @@
+<ion-view title="Search" id="page10">
+  <ion-content padding="true" class="has-header">
+    <form id="search-form6" class="list">
+      <label class="item item-input" id="search-input13">
+        <span class="input-label">Name</span>
+        <input type="text" placeholder="" ng-model="fields.name">
+      </label>
+      <ion-item class="item-divider" id="search-list-item-divider5"> Favorites:</ion-item>
+      <label class="item item-select" id="search-select7">
+        <span class="input-label">Presenter</span>
+        <select ng-model="fields.favoritepresenter">
+          <option>Any Presenter</option>
+          <option>Kareem Dana</option>
+          <option>Dr. Liang Chen</option>
+          <option>Dr. Sean Humpherys</option>
+          <option>Dr. Gary Kelly</option>
+          <option>James Webb</option>
+          <option>Nesrin Bakir</option>
+          <option>Dr. Amjad Abdullat</option>
+          <option>Dr. Denise Philpot</option>
+          <option>Dr. Jeffry Babb</option>
+          <option>Dr. Chris Zimmer</option>
+          <option>Dr. Jeremy Bellah</option>
+        </select>
+      </label>
+      <label class="item item-select" id="search-select8">
+        <span class="input-label">Event</span>
+        <select ng-model="fields.favoriteevent">
+          <option>Any Event</option>
+          <option>Computers: A passing fad???</option>
+          <option>Self-organization: Are there any benefits???</option>
+          <option>HTML 6: What is changing???</option>
+          <option>Scrum: Does anyone like it???</option>
+          <option>Why are McDonald's french fries the best???</option>
+          <option>Do hats make you smarter???</option>
+          <option>Does slow internet build character???</option>
+        </select>
+      </label>
+    </form>
+    <button id="search-button8" ng-click="search()" class="button button-balanced  button-block">Find Matching Surveys</button>
+  </ion-content>
+</ion-view>

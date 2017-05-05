@@ -1,0 +1,34 @@
+<ion-view title="{{ event.eventType }}" id="page17">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button icon No Icon" ng-click="removeEvent()"> Remove</button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <div id="savedEvent-container6">
+      <h4 id="savedEvent-heading10" style="color:#000000;text-align:center;">{{ event.eventTitle }}{{ event.customLabel }}</h4>
+      <div id="savedEvent-markdown27" style="text-align:center;" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">{{ event.starttime | date }}</p>
+      </div>
+      <div id="savedEvent-markdown28" style="text-align:center;" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">{{ event.startTime | date: "shortTime" }} - {{ event.endTime | date: "shortTime" }}
+          <br>Room: {{ event.room }}</p>
+      </div>
+      <div id="savedEvent-markdown29" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">
+          <strong>Presenters:</strong>
+        </p>
+      </div>
+      <ion-list id="savedEvent-list9">
+        <ion-item class="item-icon-left" id="savedEvent-list-item12" ng-repeat="presenter in event.presenter">
+          <i class="icon ion-android-person"></i>{{ presenter.firstName }} {{ presenter.lastName }}: {{ presenter.affiliation }}</ion-item>
+      </ion-list>
+      <div id="savedEvent-markdown30" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">
+          <strong>Presentation Notes:</strong>
+          <br>{{ event.note }}</p>
+      </div>
+      <ion-list id="savedEvent-list10">
+        <ion-item class="item-divider" id="savedEvent-list-item-divider7"> </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

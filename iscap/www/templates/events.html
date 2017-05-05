@@ -1,0 +1,26 @@
+<ion-view title="Events" id="page6">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-icon icon ion-ios-search" ng-click="changeSearch()"></button>
+  </ion-nav-buttons>
+  <ion-content padding="false" class=" manual-remove-top-padding has-header">
+    <form id="events-form4" class="list">
+      <label class="item item-input" id="events-search1" ng-show="showSearch">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="" ng-model="data.search" ng-change="search()">
+      </label>
+    </form>
+    <div id="events-container2" ng-repeat="event in events | orderBy: 'startTime'">
+      <div id="events-markdown14" style="text-align:center;" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">{{ event.startTime | date }}</p>
+      </div>
+      <h4 id="events-heading3" style="color:#000000;text-align:center;">{{ event.eventTitle }}{{ event.mealType }}{{ event.customLabel }}</h4>
+      <div id="events-markdown8" style="text-align:center;" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">{{ event.startTime | date: "shortTime" }} in Room: {{ event.room }}</p>
+      </div>
+      <a ui-sref="event({&quot;eventId&quot;:&quot;&quot;+ event.eventId +&quot;&quot;})" id="events-button10" ng-show="event.eventTitle || event.eventcustomLabel" class="button button-balanced  button-block button-outline">View Details</a>
+      <ion-list id="events-list5">
+        <ion-item class="item-divider" id="events-list-item-divider1"> </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>
